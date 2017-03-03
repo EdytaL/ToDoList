@@ -13,11 +13,29 @@
 .row {
     border: 1px solid black;
 }
+/*
 .list-of-people {
     border-right: 1px solid black;
 }
+*/
+img {
+    width: 31px;
+    height: 34px;
+    margin-right: 5px;
+}
 .unstyled {
     list-style-type: none;
+}
+.personal-task {
+    position: relative;
+}
+.personal-task input {
+    position: absolute;
+    right: 0;
+    top: 10px;
+}
+.add-task {
+    padding: 10px 0;
 }
 .footer-info {
     text-align: right;

@@ -21,20 +21,29 @@
                 <h2>People</h2>
                 <div class = "list-of-people">
                     <ul class="people unstyled">
-                        <li ng-repeat="person in peopleTasks">{{person.name}}</li>
+                        <li class ="list-group-item" ng-repeat="person in peopleTasks">
+                            <img ng-src="{{person.image}}"/>
+                            {{person.name}}
+                        </li>
                     </ul>
                 </div>
             </div>
             <div class="col-md-8 col-lg-8">
                 <h2>To be done: </h2>
                 <div class="list-of-tasks">
-                    <div ng-repeat="task in peopleTasks">
-                        <h3>{{task.description}}</h3>
+                    <div class = "personal-task panel" ng-repeat="task in peopleTasks">
+                        <h4>{{task.description}}</h4>
                         <p>{{task.name}}</p>
                         <input type="checkbox" ng-model="peopleTasks.done"/>
                     </div>
                 </div>
+                <form class="add-task">
+                    <input type="text" ng-model="newTask"/>
+                    <button class = "btn" ng-click="addTask()"><i class="glyphicon glyphicon-plus"></i>Add new task</button>
+                </form>
+                
             </div>
+            
         </section>
         <footer class="container row panel-footer">
             <div class="col-md-6 col-lg-6">
