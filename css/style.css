@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+    width: 800px;
+    border: 1px solid black;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+.row {
+    border: 1px solid black;
+}
+
+[class*="col"] {
+    border-left: 1px solid black;
+}
+.footer-info {
+    text-align: right;
+}
+.footer-info a {
+    color: #333;
+}
