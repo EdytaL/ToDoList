@@ -13,9 +13,11 @@
 .row {
     border: 1px solid black;
 }
-
-[class*="col"] {
-    border-left: 1px solid black;
+.list-of-people {
+    border-right: 1px solid black;
+}
+.unstyled {
+    list-style-type: none;
 }
 .footer-info {
     text-align: right;

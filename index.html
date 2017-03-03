@@ -16,12 +16,26 @@
         <header class ="container row page-header">
             <h1> A task list</h1>
         </header>
-        <section class="container row">
+        <section ng-controller="peopleTasksList" class="container row">
             <div class="col-md-4 col-lg-4">
                 <h2>People</h2>
+                <div class = "list-of-people">
+                    <ul class="people unstyled">
+                        <li ng-repeat="person in people">{{person.name}}</li>
+                    </ul>
+                </div>
             </div>
             <div class="col-md-8 col-lg-8">
                 <h2>To be done: </h2>
+                <div class="list-of-tasks">
+                    <table>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </section>
         <footer class="container row panel-footer">
