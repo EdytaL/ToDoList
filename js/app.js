@@ -9,11 +9,12 @@ var app = angular.module("tasksList", ["xeditable"]);
     
     app.controller("peopleTasksList", function ($scope, $filter) {
         $scope.peopleList = [
-            {name: "Jon Snow", image: "img/Jon_Snow.jpg"},
-            {name: "Tyrion Lannister", image: "img/Tyrion_Lannister.jpg" },
-            {name: "Daenerys Targaryen", image: "img/Daenerys_Targaryen.jpg"},
-            {name: "Cersei Lannister", image:"img/Cersei_Lannister.jpg"},
-            {name: "Edyta Lysiak", image:"img/Edyta_Lysiak.jpg"},
+            {name: "All", image: "img/team.jpg", tab: 0},
+            {name: "Jon Snow", image: "img/Jon_Snow.jpg", tab: 1},
+            {name: "Tyrion Lannister", image: "img/Tyrion_Lannister.jpg", tab:2 },
+            {name: "Daenerys Targaryen", image: "img/Daenerys_Targaryen.jpg", tab: 3},
+            {name: "Cersei Lannister", image:"img/Cersei_Lannister.jpg", tab: 4},
+            {name: "Edyta Lysiak", image:"img/Edyta_Lysiak.jpg", tab: 5},
         ];
         
         $scope.peopleTasks = [
