@@ -29,6 +29,13 @@ img {
 .personal-task {
     position: relative;
 }
+.checked-true {
+    background-color: palegreen;
+    color: white;
+}
+.done-true {
+    text-decoration: line-through;
+}
 .personal-task input {
     position: absolute;
     right: 0;
@@ -36,6 +43,10 @@ img {
 }
 .add-task {
     padding: 10px 0;
+}
+.clear-btn {
+    float: right;
+    margin-bottom: 10px;
 }
 .footer-info {
     text-align: right;
