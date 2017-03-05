@@ -35,20 +35,21 @@
                 </div>
             </div>
             <div class="col-md-8 col-lg-8">
-                <h2>To be done: </h2>
+                <h2>To be done: {{getTotalToDo()}}</h2>
                 <span>Search by name: </span>
                 <input type="text" ng-model="search"/>
                 <div class="list-of-tasks">
                     <div class = "personal-task panel checked-{{task.done}}" ng-repeat="task in peopleTasks | filter: search">
                         <h4 class="done-{{task.done}}">{{task.description}}</h4>
-                        <p>{{task.name}}</p>
-                        <input type="checkbox" ng-model="task.done"/>  
+                        <p id="newAssingment" ng-hidden="">{{task.name}}</p>
+                        <input class="checkbox-done" type="checkbox" ng-model="task.done"/>  
                     </div>
                 </div>
-                <form class="add-task">
-                    <input type="text" ng-model="newTask"/>
-                    <button class = "btn" ng-click="addTask()"><i class="glyphicon glyphicon-plus"></i>Add new task</button>
+                <form class="add-task" name="taskForm" novalidate>
+                    <input type="text" name="taskDescription" ng-model="newTask" required/>
+                    <button class = "btn" type="submit" ng-disabled="taskForm.$invalid" ng-click="addTask()" ng-model="decriptionRequired"><i class="glyphicon glyphicon-plus"></i>Add new task</button>
                     <button class="btn clear-btn" ng-click="clearCompleted()"><i class="glyphicon glyphicon-trash"></i>Clear Completed</button>
+                    
                 </form>
             </div>
             

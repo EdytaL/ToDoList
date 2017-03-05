@@ -36,11 +36,15 @@ img {
 .done-true {
     text-decoration: line-through;
 }
-.personal-task input {
+.checkbox-done {
     position: absolute;
     right: 0;
     top: 10px;
 }
+.edit-assignment {
+    position: relative;
+}
+
 .add-task {
     padding: 10px 0;
 }

@@ -8,13 +8,17 @@ var app = angular.module("tasksList", ["xeditable"]);
     });
     
     app.controller("peopleTasksList", function ($scope, $filter) {
+        
+        $scope.getTotalToDo = function() {
+            return $scope.peopleTasks.length;
+        };
         $scope.peopleList = [
-            {name: "All", image: "img/team.jpg", tab: 0},
-            {name: "Jon Snow", image: "img/Jon_Snow.jpg", tab: 1},
-            {name: "Tyrion Lannister", image: "img/Tyrion_Lannister.jpg", tab:2 },
-            {name: "Daenerys Targaryen", image: "img/Daenerys_Targaryen.jpg", tab: 3},
-            {name: "Cersei Lannister", image:"img/Cersei_Lannister.jpg", tab: 4},
-            {name: "Edyta Lysiak", image:"img/Edyta_Lysiak.jpg", tab: 5},
+            {name: "All", image: "img/team.jpg", tabNo: 0},
+            {name: "Jon Snow", image: "img/Jon_Snow.jpg", tabNo: 1},
+            {name: "Tyrion Lannister", image: "img/Tyrion_Lannister.jpg", tabNo:2 },
+            {name: "Daenerys Targaryen", image: "img/Daenerys_Targaryen.jpg", tabNo: 3},
+            {name: "Cersei Lannister", image:"img/Cersei_Lannister.jpg", tabNo: 4},
+            {name: "Edyta Lysiak", image:"img/Edyta_Lysiak.jpg", tabNo: 5},
         ];
         
         $scope.peopleTasks = [
@@ -24,7 +28,7 @@ var app = angular.module("tasksList", ["xeditable"]);
             {name: "Cersei Lannister", description: "Open the Small Council meeting", done: false},
             {name: "Edyta Lysiak", description: "Update the To Do List", done: false}
         ];
-       
+        
         $scope.addTask = function() {
             $scope.peopleTasks.push ({description: $scope.newTask, name: "Edyta Lysiak", done: false});
             $scope.newTask = "";
@@ -33,7 +37,8 @@ var app = angular.module("tasksList", ["xeditable"]);
             $scope.peopleTasks =$scope.peopleTasks.filter(function(task) { 
                 return !task.done
             });
-        };            
+        };     
+       
     });
 })(app);
 
