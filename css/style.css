@@ -95,6 +95,17 @@ input {
 input:focus {
     border: 1px solid #9e9e9e;
 }
+#dropdown {
+    padding: 5px;
+    font-size: 10px;
+    outline: none;
+    border: 1px solid #ededed;
+    -webkit-transition: border 0.2s ease-out;
+    transition: border 0.2s ease-out;
+    border-radius: 3px;
+    box-shadow: none;
+    margin-bottom: 10px;
+}
 .personal-task {
     position: relative;
     padding: 5px 15px;
@@ -106,7 +117,7 @@ input:focus {
     background: -ms-linear-gradient(left, #4caf50, #43a047);
     background: -o-linear-gradient(left, #4caf50, #43a047);
     background: linear-gradient(to right, #4caf50, #43a047);
-    color: white;
+    color: #fff;
 }
 .done-true {
     text-decoration: line-through;
@@ -114,18 +125,16 @@ input:focus {
 .checkbox-done {
     position: absolute;
     right: 15px;
-    top: 34px;
+    top: 15px;
+    width: 15px;
+    height: 15px;
     
 }
 .edit-assignment {
     position: relative;
 }
-
 .add-task {
     padding: 10px 0;
-}
-.add-task input {
-    min-width: 300px;
 }
 .btn {
     -moz-box-shadow:inset 0px 1px 0px 0px #cf866c;
@@ -155,6 +164,7 @@ input:focus {
 .clear-btn {
     float: right;
     margin-top: 4px;
+    margin-bottom: 5px;
 }
 .footer-info {
     text-align: right;
