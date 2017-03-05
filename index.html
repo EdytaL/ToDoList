@@ -11,7 +11,7 @@
     </head>
     <body>
         <!--JS SCRIPTS-->
-        <script type="text/javascript" src="node_modules/angular/angular.js"></script>
+        <script type="text/javascript" src="js/angular.min.js"></script>
         <script type="text/javascript" src="js/xeditable.min.js"></script>
         <script type="text/javascript" src="js/jquery-3.1.1.min.js"></script>
         <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -43,6 +43,7 @@
                     <div class = "personal-task panel checked-{{task.done}}" ng-repeat="task in peopleTasks | filter: search">
                         <h4 class="done-{{task.done}}">{{task.description}}</h4>
                         <p>{{task.name}}</p>
+                        <!-- To do: update task.name when dropdown option is selected-->
                         <p>{{nameToShow.name}}</p>
                         <select id = "dropdown" class="dropdown" ng-init="Assign" ng-options="s.name for s in peopleTasks" name="field_event" ng-model="nameToShow" ng-change="assignToNew(user)">
                             <option value="">Assign to new person</option>
