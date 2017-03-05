@@ -45,6 +45,11 @@ header h1{
     margin-left: auto;
     margin-right: auto;
 }
+@media (min-width: 768px) {
+    .container {
+        width: 95%;
+    }
+}
 .jumbotron, .panel-footer {
     border-radius: 8px;
     background: rgba(245,245,245,1);
@@ -110,6 +115,10 @@ input:focus {
     position: relative;
     padding: 5px 15px;
 }
+.personal-task h4{
+    display: inline-block;
+    padding-right: 20px;
+}
 .checked-true {
     background: #4caf50;
     background: -webkit-linear-gradient(left, #4caf50, #43a047);
@@ -164,7 +173,7 @@ input:focus {
 .clear-btn {
     float: right;
     margin-top: 4px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
 }
 .footer-info {
     text-align: right;
