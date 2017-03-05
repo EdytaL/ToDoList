@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="css/style.css">
         <link rel="stylesheet" type="text/css" href="css/xeditable.min.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
         <title>To Do List</title>
     </head>
     <body>
@@ -17,17 +18,17 @@
         <script type="text/javascript" src="js/app.js"></script>
         <!--END JS SCRIPTS-->
         
-        <header class ="container row page-header">
+        <header class ="container row">
             <h1> A task list</h1>
         </header>
-        <section ng-controller="peopleTasksList" class="container row">
+        <section ng-controller="peopleTasksList" class="container row jumbotron">
             <div class="col-md-4 col-lg-4">
                 <h2>People</h2>
                 <div class = "list-of-people">
                     <ul class="people unstyled">
                         <li class ="list-group-item" ng-repeat="person in peopleList | orderBy: 'name'">
                             <a href="#">
-                                <img ng-src="{{person.image}}"/>
+                                <img class="img-thumbnail" ng-src="{{person.image}}"/>
                                 {{person.name}}
                             </a>
                         </li>
@@ -36,8 +37,8 @@
             </div>
             <div class="col-md-8 col-lg-8">
                 <h2>To be done: {{getTotalToDo()}}</h2>
-                <span>Search by name: </span>
-                <input type="text" ng-model="search"/>
+                <button class="btn clear-btn btn-default" ng-click="clearCompleted()"><i class="glyphicon glyphicon-trash"></i> Clear Completed</button>
+                <input type="text" placeholder="Search by name" ng-model="search"/>
                 <div class="list-of-tasks">
                     <div class = "personal-task panel checked-{{task.done}}" ng-repeat="task in peopleTasks | filter: search">
                         <h4 class="done-{{task.done}}">{{task.description}}</h4>
@@ -46,10 +47,8 @@
                     </div>
                 </div>
                 <form class="add-task" name="taskForm" novalidate>
-                    <input type="text" name="taskDescription" ng-model="newTask" required/>
-                    <button class = "btn" type="submit" ng-disabled="taskForm.$invalid" ng-click="addTask()" ng-model="decriptionRequired"><i class="glyphicon glyphicon-plus"></i>Add new task</button>
-                    <button class="btn clear-btn" ng-click="clearCompleted()"><i class="glyphicon glyphicon-trash"></i>Clear Completed</button>
-                    
+                    <input type="text" placeholder = "Add a new task" name="taskDescription" ng-model="newTask" required/>
+                    <button class = "btn btn-default" type="submit" ng-disabled="taskForm.$invalid" ng-click="addTask()" ng-model="decriptionRequired"><i class="glyphicon glyphicon-plus"></i> Add new task</button>
                 </form>
             </div>
             
@@ -59,7 +58,7 @@
                 <h6>&#174; 2017 EdytaL | All rights reserved</h6>
             </div>
             <div class="col-md-6 col-lg-6">
-                <h6 class="footer-info"><a href="https://github.com/EdytaL">github.com/EdytaL</a></h6>
+                <h6 class="footer-info"><a href="https://github.com/EdytaL" target="_blank">github.com/EdytaL</a></h6>
             </div>
         </footer>
         

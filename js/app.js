@@ -13,7 +13,6 @@ var app = angular.module("tasksList", ["xeditable"]);
             return $scope.peopleTasks.length;
         };
         $scope.peopleList = [
-            {name: "All", image: "img/team.jpg", tabNo: 0},
             {name: "Jon Snow", image: "img/Jon_Snow.jpg", tabNo: 1},
             {name: "Tyrion Lannister", image: "img/Tyrion_Lannister.jpg", tabNo:2 },
             {name: "Daenerys Targaryen", image: "img/Daenerys_Targaryen.jpg", tabNo: 3},
@@ -41,4 +40,6 @@ var app = angular.module("tasksList", ["xeditable"]);
        
     });
 })(app);
+
+
 
