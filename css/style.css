@@ -45,11 +45,7 @@ header h1{
     margin-left: auto;
     margin-right: auto;
 }
-@media (min-width: 768px) {
-    .container {
-        width: 95%;
-    }
-}
+
 .jumbotron, .panel-footer {
     border-radius: 8px;
     background: rgba(245,245,245,1);
@@ -180,4 +176,12 @@ input:focus {
 }
 .footer-info a {
     color: #333;
+}
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+    input {
+        width: 100%;
+    }
 }
